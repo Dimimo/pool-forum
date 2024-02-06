@@ -1,0 +1,63 @@
+{
+    "name": "dimimo/pool-forum",
+    "description": "A Laravel Forum Package",
+    "keywords": [
+        "pool-forum"
+    ],
+    "homepage": "https://github.com/dimimo/pool-forum",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Victor Yoalli",
+            "email": "victoryoalli@gmail.com",
+            "role": "Developer"
+        }
+        {
+            "name": "Dimitri Mostrey",
+            "email": "dmostrey@yahoo.com",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0",
+        "illuminate/events": "^10.0|^11.0",
+        "illuminate/broadcasting": "^10.0|^11.0",
+        "illuminate/queue": "^10.0|^11.0",
+        "livewire/livewire": "^3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.3",
+        "orchestra/testbench": "^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dimimo\\PoolForum\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dimimo\\PoolForum\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dimimo\\PoolForum\\PoolForumServiceProvider"
+            ],
+            "aliases": {
+                "PoollForum": "Dimimo\\PoolForum\\PoolForumFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false
+}
